@@ -26,7 +26,7 @@ const SAMPLE_CONCEPTS = [
     title: "Bold Statement Thumbnail",
     description: "A vibrant gradient background (purple to pink) with large white bold text reading 'THE #1 MISTAKE' at the top. Below, in slightly smaller yellow text: '97% of Creators Make'. Include a shocked face emoji and arrow pointing down. High contrast, oversaturated.",
     textOverlay: "THE #1 MISTAKE\n97% of Creators Make",
-    colors: ["#7C3AED", "#EC4899", "#F59E0B", "#FFFFFF"],
+    colors: ["#1a1a2e", "#e94560", "#F59E0B", "#FFFFFF"],
     layout: "Center-aligned text with emoji accents",
   },
   {
@@ -40,14 +40,14 @@ const SAMPLE_CONCEPTS = [
     title: "Minimal Authority Thumbnail",
     description: "Clean white background with a professional headshot on the right side. Large black serif text on the left: '5 Rules That Changed Everything'. Subtle purple accent line below the text. Small badge icon reading 'New 2026'. Very clean, premium feel.",
     textOverlay: "5 Rules That\nChanged Everything",
-    colors: ["#FFFFFF", "#18181B", "#7C3AED", "#F5F5F5"],
+    colors: ["#FFFFFF", "#18181B", "#1a1a2e", "#F5F5F5"],
     layout: "Left text, right image, clean spacing",
   },
   {
     title: "Dark Dramatic Thumbnail",
     description: "Dark navy/black background with neon purple and pink glow effects. Large glowing text: 'THE ALGORITHM SECRET'. Holographic/futuristic elements. Small text below: 'Nobody Talks About This'. Cinematic lighting on a shadowed face. Sci-fi inspired.",
     textOverlay: "THE ALGORITHM SECRET\nNobody Talks About This",
-    colors: ["#0F172A", "#7C3AED", "#EC4899", "#38BDF8"],
+    colors: ["#0F172A", "#1a1a2e", "#e94560", "#38BDF8"],
     layout: "Centered text with glow effects",
   },
 ];

@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
         title: "Bold Statement Design",
         description: `High-contrast thumbnail with bold text "${topic.toUpperCase()}" on a vibrant gradient background.`,
         text_overlay: text_overlay || topic.toUpperCase(),
-        colors: ["#7C3AED", "#EC4899", "#F59E0B", "#FFFFFF"],
+        colors: ["#1a1a2e", "#e94560", "#F59E0B", "#FFFFFF"],
         layout: "Center-aligned bold text with accent elements",
       },
       {
@@ -28,14 +28,14 @@ export async function POST(req: NextRequest) {
         title: "Minimalist Authority",
         description: `Clean white background with premium typography about ${topic}.`,
         text_overlay: topic,
-        colors: ["#FFFFFF", "#18181B", "#7C3AED"],
+        colors: ["#FFFFFF", "#18181B", "#1a1a2e"],
         layout: "Left-aligned text, right-side visual element",
       },
       {
         title: "Dark Cinematic",
         description: `Dark background with neon glow effects themed around ${topic}.`,
         text_overlay: topic.toUpperCase(),
-        colors: ["#0F172A", "#7C3AED", "#EC4899", "#38BDF8"],
+        colors: ["#0F172A", "#1a1a2e", "#e94560", "#38BDF8"],
         layout: "Centered text with atmospheric glow",
       },
     ];

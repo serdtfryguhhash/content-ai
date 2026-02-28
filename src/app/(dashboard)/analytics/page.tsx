@@ -14,7 +14,7 @@ const STATS = [
   { label: "Total Views", value: 2456789, change: 23.5, icon: Eye, color: "text-blue-500" },
   { label: "Total Likes", value: 189432, change: 15.2, icon: Heart, color: "text-red-500" },
   { label: "Comments", value: 34521, change: 8.7, icon: MessageSquare, color: "text-green-500" },
-  { label: "Shares", value: 12345, change: -3.2, icon: Share2, color: "text-purple-500" },
+  { label: "Shares", value: 12345, change: -3.2, icon: Share2, color: "text-secondary" },
 ];
 
 const PLATFORM_DATA = [

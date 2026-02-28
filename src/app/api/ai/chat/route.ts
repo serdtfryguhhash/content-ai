@@ -41,11 +41,8 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET() {
-  try {
-    const res = await fetch("http://localhost:11434/api/tags");
-    if (!res.ok) return NextResponse.json({ available: false });
-    return NextResponse.json({ available: true, model: "llama3.2" });
-  } catch {
-    return NextResponse.json({ available: false, error: "Ollama is not running" });
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return NextResponse.json({ available: false, error: "ANTHROPIC_API_KEY not set" });
   }
+  return NextResponse.json({ available: true, model: "claude-sonnet-4-20250514" });
 }

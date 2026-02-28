@@ -7,7 +7,7 @@ import { TESTIMONIALS } from "@/lib/constants";
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-24 bg-gradient-to-b from-white to-primary-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            See why creators across YouTube, TikTok, Instagram, and more trust Content.ai 
+            See why creators across YouTube, TikTok, Instagram, and more trust Content.ai
             to power their content production.
           </motion.p>
         </div>
@@ -38,21 +38,24 @@ export default function TestimonialsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl p-6 border shadow-sm card-hover"
+              className="bg-white rounded-2xl p-6 border border-primary/5 shadow-sm card-hover"
             >
               <div className="flex items-center gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                 ))}
               </div>
-              <Quote className="w-8 h-8 text-primary/20 mb-3" />
+              <Quote className="w-8 h-8 text-secondary/20 mb-3" />
               <p className="text-sm text-foreground leading-relaxed mb-6">
                 {testimonial.content}
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-sm">
-                  {testimonial.name.split(" ").map((n) => n[0]).join("")}
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  className="w-10 h-10 rounded-full object-cover ring-2 ring-primary/10"
+                />
                 <div>
                   <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
                   <p className="text-xs text-muted-foreground">{testimonial.role}</p>

@@ -15,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useApp } from "@/context/AppContext";
+import { StreakBadge } from "@/components/shared/StreakBadge";
 
 const NAV_LINKS = [
   { href: "/studio", label: "Studio" },
@@ -58,6 +59,7 @@ export default function Navbar() {
 
           {/* Right section */}
           <div className="hidden md:flex items-center gap-3">
+            <StreakBadge />
             {isAuthenticated ? (
               <>
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">

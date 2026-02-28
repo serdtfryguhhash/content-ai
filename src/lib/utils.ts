@@ -72,7 +72,7 @@ export function getPlatformColor(platform: string): string {
     blog: "#2ECC71",
     newsletter: "#F39C12",
   };
-  return colors[platform] || "#7C3AED";
+  return colors[platform] || "#1a1a2e";
 }
 
 export function getPlatformIcon(platform: string): string {

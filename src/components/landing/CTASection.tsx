@@ -28,12 +28,12 @@ export default function CTASection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden"
+            className="bg-gradient-to-br from-primary-50 via-accent-50/30 to-secondary-50/20 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden border border-primary/5"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl" />
             <div className="relative">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-primary text-sm font-medium mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-secondary text-sm font-medium mb-6 shadow-sm border border-secondary/10">
                 <Mail className="w-4 h-4" />
                 Weekly Creator Newsletter
               </div>
@@ -41,7 +41,7 @@ export default function CTASection() {
                 Get AI Content Tips Every Week
               </h2>
               <p className="text-muted-foreground max-w-lg mx-auto mb-8">
-                Join 25,000+ creators getting weekly AI content strategies, templates, and insider tips 
+                Join 25,000+ creators getting weekly AI content strategies, templates, and insider tips
                 to grow faster across every platform.
               </p>
               {subscribed ? (
@@ -77,8 +77,8 @@ export default function CTASection() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20" />
+      <section className="py-24 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/15 via-transparent to-accent/10" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,17 +87,17 @@ export default function CTASection() {
           >
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
               Ready to Create Content That{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-300 to-secondary-300">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent-300 to-secondary-300">
                 Actually Grows Your Audience?
               </span>
             </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
-              Join 50,000+ creators who use Content.ai to produce better content, faster. 
+            <p className="text-lg text-primary-200 max-w-2xl mx-auto mb-10">
+              Join 50,000+ creators who use Content.ai to produce better content, faster.
               Start with our free plan — no credit card required.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/signup">
-                <Button variant="gradient" size="xl" className="group">
+                <Button variant="gradient" size="xl" className="group bg-gradient-to-r from-secondary to-accent text-white">
                   Get Started Free
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

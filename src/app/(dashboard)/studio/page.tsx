@@ -29,131 +29,90 @@ interface GeneratedContent {
   thumbnailConcept: string;
 }
 
-const SAMPLE_CONTENT: Record<string, GeneratedContent> = {
-  default: {
-    hooks: [
-      "Nobody tells you this about growing on social media, but after reaching 1M followers, I can tell you the #1 mistake creators make is...",
-      "I spent $10,000 testing content strategies so you don't have to. Here are the 3 that actually work in 2026...",
-      "Stop doing THIS if you want to grow. I wasted 2 years before I figured this out.",
-      "The algorithm doesn't hate you — you're just making this one critical mistake that 97% of creators don't know about.",
-      "What if I told you that your content isn't the problem? After coaching 500+ creators, I found that the REAL issue is...",
-    ],
-    script: `COLD OPEN (0:00-0:15):
-"What if I told you that 97% of content creators are making a critical mistake that's killing their growth? And the worst part? Most of them don't even know they're doing it."
-
-[B-ROLL: Quick montage of scrolling through social media feeds]
+// Fallback content used when the AI API is unavailable
+const FALLBACK_CONTENT: GeneratedContent = {
+  hooks: [
+    "Nobody tells you this about growing on social media, but after reaching 1M followers, I can tell you the #1 mistake creators make is...",
+    "I spent $10,000 testing content strategies so you don't have to. Here are the 3 that actually work in 2026...",
+    "Stop doing THIS if you want to grow. I wasted 2 years before I figured this out.",
+    "The algorithm doesn't hate you -- you're just making this one critical mistake that 97% of creators don't know about.",
+    "What if I told you that your content isn't the problem? After coaching 500+ creators, I found that the REAL issue is...",
+  ],
+  script: `COLD OPEN (0:00-0:15):
+"What if I told you that 97% of content creators are making a critical mistake that's killing their growth?"
 
 INTRO (0:15-0:45):
-"Hey everyone, welcome back to the channel. I'm [Name], and today I'm going to share something that completely changed how I approach content creation. This isn't theory — this is based on data from over 500 creators I've worked with."
-
-[GRAPHIC: Show "500+ Creators Analyzed" text overlay]
+"Hey everyone, welcome back. Today I'm sharing something that completely changed how I approach content creation."
 
 CHAPTER 1: THE PROBLEM (0:45-3:00):
-"So here's the thing — most creators focus on the WRONG metrics. They obsess over views and followers, but completely ignore the metric that actually drives growth."
-
-"Let me show you what I mean. Take a look at these two creators..."
-
-[SCREEN SHARE: Side-by-side comparison of two creator profiles]
-
-"Creator A has 100K followers but gets 500 views per video. Creator B has 10K followers but gets 50,000 views per video. Who would you rather be?"
-
-"The difference? Creator B understands one thing that Creator A doesn't: ENGAGEMENT DEPTH."
+"Most creators focus on the WRONG metrics. They obsess over views and followers, but completely ignore the metric that actually drives growth."
 
 CHAPTER 2: THE FRAMEWORK (3:00-7:00):
-"I call this the Content Depth Framework, and it has three pillars:"
+"I call this the Content Depth Framework, and it has three pillars: Hook Hierarchy, Value Stack, and Engagement Loop."
 
-"Pillar 1: The Hook Hierarchy
-Your hook isn't just the first line — it's the first 3 seconds, the first 30 seconds, AND the first 3 minutes. Each one serves a different purpose."
-
-[GRAPHIC: Hook Hierarchy pyramid visual]
-
-"Pillar 2: The Value Stack
-Don't just give one piece of value. Stack multiple value moments throughout your content so viewers always feel like the next insight is coming."
-
-[GRAPHIC: Value Stack timeline visual]
-
-"Pillar 3: The Engagement Loop
-End every piece of content with something that makes people want to engage — not just consume."
-
-[GRAPHIC: Engagement loop diagram]
-
-CHAPTER 3: IMPLEMENTATION (7:00-11:00):
-"Now let me show you exactly how to implement this. I'm going to walk you through my actual content creation process."
-
-"Step 1: Before I create anything, I write down 5 hooks using different styles — controversial, curiosity, story, stat, and question. Then I test them."
-
-"Step 2: I map out my value stack. For a 10-minute video, I aim for at least 7 distinct value moments."
-
-"Step 3: I craft my engagement loop. This could be a question, a challenge, or a teaser for the next video."
-
-[SCREEN SHARE: Walk through actual content planning document]
-
-CHAPTER 4: RESULTS (11:00-13:00):
-"Since implementing this framework, here are my actual numbers:"
-
-"Views per video: Up 340%
-Average watch time: Up from 2:30 to 8:45
-Comments per video: Up 500%
-New subscribers per video: Up 250%"
-
-[GRAPHIC: Before/after metrics dashboard]
-
-"And it's not just me. Here are results from creators who've used this framework..."
-
-OUTRO (13:00-14:00):
-"If this video helped you, smash that like button and subscribe for more content strategy breakdowns every Tuesday and Friday."
-
-"Drop a comment telling me: What's YOUR biggest content creation challenge right now?"
-
-"And watch THIS video next — I break down the exact hook formulas I use to stop the scroll every single time."
-
-[END SCREEN with video suggestion]`,
-    caption: `The #1 mistake killing your content growth (and what to do instead) 🎯
+OUTRO:
+"If this video helped you, like and subscribe. Drop a comment telling me your biggest content creation challenge."`,
+  caption: `The #1 mistake killing your content growth (and what to do instead).
 
 I analyzed 500+ creators to find what separates the top 1% from everyone else.
 
-The answer? It's not about posting more. It's not about trends. It's about DEPTH.
+The answer? It's not about posting more. It's about DEPTH.
 
-In this video, I break down my Content Depth Framework:
-📌 The Hook Hierarchy
-📌 The Value Stack  
-📌 The Engagement Loop
+Save this and implement it in your next piece of content.`,
+  hashtags: [
+    "#contentcreator", "#contentcreation", "#growthhacking", "#socialmediatips",
+    "#creatoreconomy", "#contentstrategy", "#socialmediamarketing", "#youtubergrowth",
+    "#creatortips", "#contentmarketing", "#digitalmarketing", "#growthstrategy",
+    "#viralcontent", "#algorithmsecrets", "#creatorlife",
+  ],
+  bRollList: [
+    "Scrolling through social media feeds on phone (close-up shot)",
+    "Typing on laptop showing analytics dashboard",
+    "Time-lapse of content planning whiteboard session",
+    "Split screen comparison of two creator profiles",
+    "Screen recording of actual content planning document",
+  ],
+  thumbnailConcept: `MAIN IMAGE: Split screen showing a frustrated creator on the left vs. a confident, successful creator on the right.
 
-The results speak for themselves:
-📈 340% more views
-⏱️ 3.5x longer watch time
-💬 5x more comments
+TEXT OVERLAY: "THE #1 MISTAKE" in bold text at the top, with "97% of Creators Make" below.
 
-Save this and implement it in your next piece of content 💾
-
-What's your biggest content challenge? Tell me below 👇`,
-    hashtags: [
-      "#contentcreator", "#contentcreation", "#growthhacking", "#socialmediatips",
-      "#creatoreconomy", "#contentstrategy", "#socialmediamarketing", "#youtubergrowth",
-      "#creatortips", "#contentmarketing", "#digitalmarketing", "#growthstrategy",
-      "#viralcontent", "#algorithmsecrets", "#creatorlife",
-    ],
-    bRollList: [
-      "Scrolling through social media feeds on phone (close-up shot)",
-      "Typing on laptop showing analytics dashboard",
-      "Time-lapse of content planning whiteboard session",
-      "Split screen comparison of two creator profiles",
-      "Animated graphics: pyramid, timeline, and loop diagrams",
-      "Screen recording of actual content planning document",
-      "Before/after metrics dashboard animation",
-      "Montage of successful creators creating content",
-      "Close-up of hand drawing framework on iPad",
-      "Cinematic shot of creator in professional studio setup",
-    ],
-    thumbnailConcept: `MAIN IMAGE: Split screen showing a frustrated creator on the left (holding head, looking at phone with sad analytics) vs. a confident, successful creator on the right (celebrating with confetti, showing amazing analytics on screen).
-
-TEXT OVERLAY: "THE #1 MISTAKE" in bold yellow text at the top, with "97% of Creators Make" in white below it.
-
-STYLE: High contrast, slightly oversaturated colors. Red/orange tint on the "before" side, green/blue tint on the "after" side. Large facial expressions for emotional impact.
-
-ELEMENTS: Red X on the left side, Green checkmark on the right. Arrow pointing from left to right showing transformation.`,
-  },
+STYLE: High contrast, slightly oversaturated. Red/orange tint on the "before" side, green/blue tint on the "after" side.`,
 };
+
+function parseAIResponse(raw: string): GeneratedContent {
+  // Try to extract JSON from the AI response
+  try {
+    // The AI might wrap JSON in markdown code fences
+    const jsonMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/) || [null, raw];
+    const jsonStr = jsonMatch[1]?.trim() || raw.trim();
+    const parsed = JSON.parse(jsonStr);
+
+    return {
+      hooks: Array.isArray(parsed.hooks)
+        ? parsed.hooks.map((h: { text?: string } | string) => typeof h === "string" ? h : h.text || JSON.stringify(h))
+        : FALLBACK_CONTENT.hooks,
+      script: typeof parsed.script === "string" ? parsed.script : FALLBACK_CONTENT.script,
+      caption: typeof parsed.caption === "string" ? parsed.caption : FALLBACK_CONTENT.caption,
+      hashtags: Array.isArray(parsed.hashtags) ? parsed.hashtags : FALLBACK_CONTENT.hashtags,
+      bRollList: Array.isArray(parsed.brollList || parsed.bRollList)
+        ? (parsed.brollList || parsed.bRollList).map((b: { shot?: string } | string) => typeof b === "string" ? b : b.shot || JSON.stringify(b))
+        : FALLBACK_CONTENT.bRollList,
+      thumbnailConcept: typeof parsed.thumbnailConcept === "string"
+        ? parsed.thumbnailConcept
+        : FALLBACK_CONTENT.thumbnailConcept,
+    };
+  } catch {
+    // If JSON parsing fails, try to extract sections from plain text
+    return {
+      hooks: FALLBACK_CONTENT.hooks,
+      script: raw || FALLBACK_CONTENT.script,
+      caption: FALLBACK_CONTENT.caption,
+      hashtags: FALLBACK_CONTENT.hashtags,
+      bRollList: FALLBACK_CONTENT.bRollList,
+      thumbnailConcept: FALLBACK_CONTENT.thumbnailConcept,
+    };
+  }
+}
 
 export default function StudioPage() {
   const { addNotification, consumeCredit } = useApp();
@@ -179,11 +138,40 @@ export default function StudioPage() {
     }
     setGenerating(true);
     setContent(null);
-    // Simulate AI generation
-    await new Promise((r) => setTimeout(r, 3000));
-    setContent(SAMPLE_CONTENT.default);
+
+    try {
+      const res = await fetch("/api/ai/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "generate-content",
+          platform,
+          contentType,
+          topic: `${topic}${audience ? ` | Target audience: ${audience}` : ""}${tone ? ` | Tone: ${tone}` : ""}${context ? ` | Additional context: ${context}` : ""}`,
+          niche: "general",
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success && data.response) {
+        const parsed = parseAIResponse(data.response);
+        setContent(parsed);
+        addNotification({ id: Date.now().toString(), type: "success", title: "Content Generated!", message: "Your AI-powered content package is ready. Review and edit below." });
+      } else {
+        // API returned an error -- fall back to sample content
+        console.warn("AI API error, using fallback:", data.error);
+        setContent(FALLBACK_CONTENT);
+        addNotification({ id: Date.now().toString(), type: "info", title: "Content Generated", message: "Generated with sample data. Set ANTHROPIC_API_KEY for AI-powered results." });
+      }
+    } catch (err) {
+      // Network or other error -- fall back to sample content
+      console.warn("AI request failed, using fallback:", err);
+      setContent(FALLBACK_CONTENT);
+      addNotification({ id: Date.now().toString(), type: "info", title: "Content Generated", message: "Generated with sample data. Check your API connection for AI-powered results." });
+    }
+
     setGenerating(false);
-    addNotification({ id: Date.now().toString(), type: "success", title: "Content Generated!", message: "Your content package is ready. Review and edit below." });
   };
 
   const handleCopy = async (text: string, field: string) => {
@@ -212,7 +200,7 @@ export default function StudioPage() {
           <Card className="sticky top-24">
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
-                <Wand2 className="w-5 h-5 text-primary" />
+                <Wand2 className="w-5 h-5 text-secondary" />
                 Content Brief
               </CardTitle>
             </CardHeader>
@@ -248,7 +236,7 @@ export default function StudioPage() {
               <div className="space-y-2">
                 <label className="text-sm font-medium">Topic / Idea <span className="text-destructive">*</span></label>
                 <Textarea
-                  placeholder="e.g., The biggest content creation mistakes new creators make and how to avoid them"
+                  placeholder="e.g., How to grow on YouTube in 2026 using AI tools for content creation"
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   className="min-h-[100px]"
@@ -337,7 +325,7 @@ export default function StudioPage() {
                       initial={{ opacity: 0.3 }}
                       animate={{ opacity: [0.3, 1, 0.3] }}
                       transition={{ duration: 1.5, delay: i * 0.2, repeat: Infinity }}
-                      className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium"
+                      className="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-medium"
                     >
                       {step}
                     </motion.div>
@@ -393,11 +381,11 @@ export default function StudioPage() {
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="group p-4 rounded-xl border hover:border-primary/30 hover:bg-primary/5 transition-all"
+                            className="group p-4 rounded-xl border hover:border-secondary/30 hover:bg-secondary/5 transition-all"
                           >
                             <div className="flex items-start justify-between gap-4">
                               <div className="flex gap-3">
-                                <span className="w-6 h-6 rounded-full bg-primary/10 text-primary text-xs flex items-center justify-center font-bold shrink-0 mt-0.5">
+                                <span className="w-6 h-6 rounded-full bg-secondary/10 text-secondary text-xs flex items-center justify-center font-bold shrink-0 mt-0.5">
                                   {i + 1}
                                 </span>
                                 <p className="text-sm leading-relaxed">{hook}</p>
@@ -434,7 +422,7 @@ export default function StudioPage() {
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <div className="bg-gray-50 rounded-xl p-6 font-mono text-sm leading-relaxed whitespace-pre-wrap max-h-[600px] overflow-y-auto">
+                        <div className="bg-primary/3 rounded-xl p-6 font-mono text-sm leading-relaxed whitespace-pre-wrap max-h-[600px] overflow-y-auto">
                           {content.script}
                         </div>
                         <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
@@ -455,7 +443,7 @@ export default function StudioPage() {
                         </Button>
                       </CardHeader>
                       <CardContent>
-                        <div className="bg-gray-50 rounded-xl p-6 text-sm leading-relaxed whitespace-pre-wrap">
+                        <div className="bg-primary/3 rounded-xl p-6 text-sm leading-relaxed whitespace-pre-wrap">
                           {content.caption}
                         </div>
                       </CardContent>
@@ -480,7 +468,7 @@ export default function StudioPage() {
                               animate={{ opacity: 1, scale: 1 }}
                               transition={{ delay: i * 0.05 }}
                               onClick={() => handleCopy(tag, `tag-${i}`)}
-                              className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium hover:bg-primary/20 transition-colors"
+                              className="px-3 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-medium hover:bg-secondary/20 transition-colors"
                             >
                               {copiedField === `tag-${i}` ? <Check className="w-3 h-3 inline mr-1" /> : null}
                               {tag}
@@ -508,9 +496,9 @@ export default function StudioPage() {
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: i * 0.05 }}
-                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                              className="flex items-start gap-3 p-3 rounded-lg hover:bg-primary/3 transition-colors"
                             >
-                              <div className="w-8 h-8 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center text-xs font-bold shrink-0">
+                              <div className="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center text-xs font-bold shrink-0">
                                 {i + 1}
                               </div>
                               <div className="flex items-center gap-2">
@@ -535,11 +523,11 @@ export default function StudioPage() {
                       </CardHeader>
                       <CardContent>
                         <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl p-6">
-                          <div className="aspect-video rounded-lg bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center mb-4 border-2 border-dashed border-primary/30">
+                          <div className="aspect-video rounded-lg bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 flex items-center justify-center mb-4 border-2 border-dashed border-secondary/30">
                             <div className="text-center">
-                              <Camera className="w-12 h-12 text-primary/50 mx-auto mb-2" />
+                              <Camera className="w-12 h-12 text-secondary/50 mx-auto mb-2" />
                               <p className="text-sm text-muted-foreground">Thumbnail Preview</p>
-                              <p className="text-xs text-muted-foreground">DALL-E 3 generation available on Creator plan</p>
+                              <p className="text-xs text-muted-foreground">Image generation available on Creator plan</p>
                             </div>
                           </div>
                           <div className="bg-white rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap">
@@ -561,7 +549,7 @@ export default function StudioPage() {
                     </Button>
                   </div>
                   <Button variant="gradient">
-                    <Calendar className="w-4 h-4 mr-2" /> Add to Calendar
+                    <CalendarIcon className="w-4 h-4 mr-2" /> Add to Calendar
                   </Button>
                 </div>
               </motion.div>
@@ -573,11 +561,11 @@ export default function StudioPage() {
                 className="flex flex-col items-center justify-center py-32 text-center"
               >
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-6">
-                  <Sparkles className="w-10 h-10 text-primary" />
+                  <Sparkles className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="font-display text-xl font-semibold mb-2">Ready to Create?</h3>
                 <p className="text-sm text-muted-foreground max-w-md mb-4">
-                  Fill in your content brief on the left and hit Generate to create a complete content package 
+                  Fill in your content brief on the left and hit Generate to create an AI-powered content package
                   with hooks, scripts, captions, hashtags, B-roll lists, and thumbnail concepts.
                 </p>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -587,7 +575,7 @@ export default function StudioPage() {
                   <ChevronRight className="w-3 h-3" />
                   <span>Generate</span>
                   <ChevronRight className="w-3 h-3" />
-                  <span className="text-primary font-medium">Create amazing content</span>
+                  <span className="text-secondary font-medium">Create amazing content</span>
                 </div>
               </motion.div>
             )}
@@ -598,7 +586,7 @@ export default function StudioPage() {
   );
 }
 
-function Calendar(props: React.SVGProps<SVGSVGElement>) {
+function CalendarIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>
