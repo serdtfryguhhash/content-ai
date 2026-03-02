@@ -8,8 +8,10 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Separator } from "@/components/ui/separator";
 
 import PageHeader from "@/components/shared/PageHeader";
+import TemplateBuilder from "@/components/features/template-builder";
 import { DEMO_TEMPLATES } from "@/lib/constants";
 import { getPlatformColor, getPlatformIcon, formatNumber, copyToClipboard } from "@/lib/utils";
 import { Template } from "@/types";
@@ -37,6 +39,13 @@ export default function TemplatesPage() {
   return (
     <div className="max-w-7xl mx-auto">
       <PageHeader icon={LayoutGrid} title="Template Library" description="50+ battle-tested templates for every platform and niche" />
+
+      {/* Custom Template Builder */}
+      <div className="mb-8">
+        <TemplateBuilder />
+      </div>
+
+      <Separator className="mb-8" />
 
       {/* Search and filters */}
       <div className="mb-6 flex flex-col sm:flex-row gap-4">

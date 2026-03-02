@@ -234,3 +234,97 @@ export interface AIResponse<T> {
   credits_used?: number;
   credits_remaining?: number;
 }
+
+// ====== Stickiness Features Types ======
+
+export type BrandTone = "casual" | "professional" | "edgy" | "inspirational" | "educational" | "humorous";
+
+export interface BrandVoice {
+  brandName: string;
+  targetAudience: string;
+  targetAge: string;
+  tone: BrandTone;
+  niche: string;
+  platforms: Platform[];
+  exampleContent: string;
+  pastTopics: string[];
+  performanceNotes: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ContentPrediction {
+  engagementScore: number;
+  viralityPotential: number;
+  bestPostingTime: string;
+  improvements: string[];
+  strengths: string[];
+  overallVerdict: string;
+}
+
+export interface LibraryItem {
+  id: string;
+  type: "content-package" | "hook" | "script" | "template";
+  title: string;
+  content: string;
+  platform: Platform;
+  tags: string[];
+  isFavorite: boolean;
+  createdAt: string;
+}
+
+export interface TrendIdea {
+  id: string;
+  title: string;
+  description: string;
+  platform: Platform;
+  trendScore: number;
+  hashtags: string[];
+  whyTrending: string;
+}
+
+export interface RepurposedContent {
+  platform: Platform;
+  title: string;
+  content: string;
+  format: string;
+  tips: string;
+}
+
+export interface WeeklyReport {
+  weekOf: string;
+  contentCreated: number;
+  platformsCovered: Platform[];
+  consistencyScore: number;
+  consistencyChange: number;
+  bestPerformingType: string;
+  highlights: string[];
+  recommendations: string[];
+  xpEarned: number;
+}
+
+export interface CustomTemplate {
+  id: string;
+  name: string;
+  platform: Platform;
+  introFormula: string;
+  bodyPattern: string;
+  ctaStyle: string;
+  exampleOutput: string;
+  createdAt: string;
+}
+
+export type CreatorLevel = "Rookie" | "Creator" | "Influencer" | "Producer" | "Mogul";
+
+export interface XPAction {
+  action: string;
+  xp: number;
+  timestamp: string;
+}
+
+export interface GamificationData {
+  totalXP: number;
+  level: CreatorLevel;
+  actions: XPAction[];
+  achievements: string[];
+}

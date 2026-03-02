@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import DashboardSidebar from "@/components/layout/DashboardSidebar";
+import AchievementToast from "@/components/shared/AchievementToast";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,6 +12,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           {children}
         </main>
       </div>
+      <AchievementToast />
     </div>
   );
 }

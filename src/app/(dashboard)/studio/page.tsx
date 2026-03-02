@@ -15,9 +15,15 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PageHeader from "@/components/shared/PageHeader";
+import BrandVoiceIndicator from "@/components/features/brand-voice-indicator";
+import ContentScore from "@/components/features/content-score";
 import { useApp } from "@/context/AppContext";
 import { PLATFORMS, CONTENT_TYPES, TONES } from "@/lib/constants";
 import { copyToClipboard } from "@/lib/utils";
+import { getBrandVoice, hasBrandVoice, addPastTopic, buildBrandContext } from "@/lib/ai-memory";
+import { addLibraryItem } from "@/lib/library";
+import { awardXP } from "@/lib/gamification";
+import { showAchievement } from "@/components/shared/AchievementToast";
 import { Platform, ContentType } from "@/types";
 
 interface GeneratedContent {
@@ -29,7 +35,6 @@ interface GeneratedContent {
   thumbnailConcept: string;
 }
 
-// Fallback content used when the AI API is unavailable
 const FALLBACK_CONTENT: GeneratedContent = {
   hooks: [
     "Nobody tells you this about growing on social media, but after reaching 1M followers, I can tell you the #1 mistake creators make is...",
@@ -80,9 +85,7 @@ STYLE: High contrast, slightly oversaturated. Red/orange tint on the "before" si
 };
 
 function parseAIResponse(raw: string): GeneratedContent {
-  // Try to extract JSON from the AI response
   try {
-    // The AI might wrap JSON in markdown code fences
     const jsonMatch = raw.match(/```(?:json)?\s*([\s\S]*?)```/) || [null, raw];
     const jsonStr = jsonMatch[1]?.trim() || raw.trim();
     const parsed = JSON.parse(jsonStr);
@@ -102,7 +105,6 @@ function parseAIResponse(raw: string): GeneratedContent {
         : FALLBACK_CONTENT.thumbnailConcept,
     };
   } catch {
-    // If JSON parsing fails, try to extract sections from plain text
     return {
       hooks: FALLBACK_CONTENT.hooks,
       script: raw || FALLBACK_CONTENT.script,
@@ -139,6 +141,13 @@ export default function StudioPage() {
     setGenerating(true);
     setContent(null);
 
+    // Inject brand voice context if available
+    let brandContext = "";
+    if (hasBrandVoice()) {
+      const voice = getBrandVoice();
+      brandContext = buildBrandContext(voice);
+    }
+
     try {
       const res = await fetch("/api/ai/chat", {
         method: "POST",
@@ -147,7 +156,7 @@ export default function StudioPage() {
           action: "generate-content",
           platform,
           contentType,
-          topic: `${topic}${audience ? ` | Target audience: ${audience}` : ""}${tone ? ` | Tone: ${tone}` : ""}${context ? ` | Additional context: ${context}` : ""}`,
+          topic: `${topic}${audience ? ` | Target audience: ${audience}` : ""}${tone ? ` | Tone: ${tone}` : ""}${context ? ` | Additional context: ${context}` : ""}${brandContext ? ` | Brand voice: ${brandContext}` : ""}`,
           niche: "general",
         }),
       });
@@ -157,15 +166,41 @@ export default function StudioPage() {
       if (data.success && data.response) {
         const parsed = parseAIResponse(data.response);
         setContent(parsed);
+
+        // Track topic and award XP
+        addPastTopic(topic);
+        const xpResult = awardXP("generate-content");
+        showAchievement({
+          id: Date.now().toString(),
+          type: "xp",
+          xp: xpResult.xpAwarded,
+          action: "generate-content",
+        });
+        if (xpResult.levelUp) {
+          showAchievement({
+            id: `levelup-${Date.now()}`,
+            type: "levelup",
+            level: xpResult.newLevel,
+          });
+        }
+
+        // Save to library
+        addLibraryItem({
+          type: "content-package",
+          title: topic,
+          content: parsed.script,
+          platform,
+          tags: [contentType, tone.toLowerCase()],
+          isFavorite: false,
+        });
+
         addNotification({ id: Date.now().toString(), type: "success", title: "Content Generated!", message: "Your AI-powered content package is ready. Review and edit below." });
       } else {
-        // API returned an error -- fall back to sample content
         console.warn("AI API error, using fallback:", data.error);
         setContent(FALLBACK_CONTENT);
         addNotification({ id: Date.now().toString(), type: "info", title: "Content Generated", message: "Generated with sample data. Set ANTHROPIC_API_KEY for AI-powered results." });
       }
     } catch (err) {
-      // Network or other error -- fall back to sample content
       console.warn("AI request failed, using fallback:", err);
       setContent(FALLBACK_CONTENT);
       addNotification({ id: Date.now().toString(), type: "info", title: "Content Generated", message: "Generated with sample data. Check your API connection for AI-powered results." });
@@ -182,6 +217,11 @@ export default function StudioPage() {
 
   const filteredContentTypes = CONTENT_TYPES.filter((ct) => ct.platforms.includes(platform));
 
+  // Get all content as one string for the predictor
+  const allContentText = content
+    ? [content.hooks.join("\n"), content.script, content.caption].join("\n\n")
+    : "";
+
   return (
     <div className="max-w-7xl mx-auto">
       <PageHeader
@@ -189,6 +229,7 @@ export default function StudioPage() {
         title="AI Content Studio"
         description="Generate complete content packages for any platform in seconds"
       >
+        <BrandVoiceIndicator />
         <Badge variant="secondary" className="gap-1">
           <Sparkles className="w-3 h-3" /> AI-Powered
         </Badge>
@@ -196,7 +237,7 @@ export default function StudioPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Input Panel */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 space-y-4">
           <Card className="sticky top-24">
             <CardHeader>
               <CardTitle className="text-lg flex items-center gap-2">
@@ -294,6 +335,15 @@ export default function StudioPage() {
               </Button>
             </CardContent>
           </Card>
+
+          {/* Performance Predictor */}
+          {content && (
+            <ContentScore
+              content={allContentText}
+              platform={platform}
+              contentType={contentType}
+            />
+          )}
         </div>
 
         {/* Output Panel */}

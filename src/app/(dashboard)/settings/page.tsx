@@ -11,6 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import PageHeader from "@/components/shared/PageHeader";
+import BrandVoiceTrainer from "@/components/features/brand-voice-trainer";
 import { useApp } from "@/context/AppContext";
 
 export default function SettingsPage() {
@@ -31,6 +32,9 @@ export default function SettingsPage() {
       <PageHeader icon={Settings} title="Settings" description="Manage your account and preferences" />
 
       <div className="space-y-6">
+        {/* Brand Voice */}
+        <BrandVoiceTrainer />
+
         {/* Profile */}
         <Card>
           <CardHeader>

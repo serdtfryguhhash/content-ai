@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BarChart3, TrendingUp, Eye, Heart, MessageSquare, Share2, ArrowUpRight, ArrowDownRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// import { Badge } from "@/components/ui/badge";
-// import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import PageHeader from "@/components/shared/PageHeader";
+import ConsistencyScore from "@/components/features/consistency-score";
+import ShareCard from "@/components/shared/ShareCard";
 import { formatNumber, getPlatformColor, getPlatformIcon } from "@/lib/utils";
 
 const STATS = [
@@ -86,8 +86,8 @@ export default function AnalyticsPage() {
         })}
       </div>
 
+      {/* Consistency Score + Chart */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        {/* Chart */}
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2">
@@ -130,8 +130,13 @@ export default function AnalyticsPage() {
           </CardContent>
         </Card>
 
+        {/* Consistency Score */}
+        <ConsistencyScore />
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Platform breakdown */}
-        <Card>
+        <Card className="lg:col-span-2">
           <CardHeader>
             <CardTitle className="text-lg">Platform Breakdown</CardTitle>
           </CardHeader>
@@ -160,6 +165,9 @@ export default function AnalyticsPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Share Card */}
+        <ShareCard />
       </div>
 
       {/* Top content */}

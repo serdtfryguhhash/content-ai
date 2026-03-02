@@ -7,17 +7,21 @@ import { motion } from "framer-motion";
 import {
   Sparkles, FileText, Calendar, Image, LayoutGrid,
   BarChart3, Settings, Gift, ChevronLeft, ChevronRight, Zap,
+  Library, Home,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useApp } from "@/context/AppContext";
+import XPBar from "@/components/shared/XPBar";
 
 const SIDEBAR_ITEMS = [
+  { href: "/dashboard", label: "Dashboard", icon: Home },
   { href: "/studio", label: "AI Studio", icon: Sparkles, gradient: true },
   { href: "/hooks", label: "Hook Generator", icon: Zap },
   { href: "/scripts", label: "Script Writer", icon: FileText },
   { href: "/calendar", label: "Content Calendar", icon: Calendar },
   { href: "/thumbnails", label: "Thumbnails", icon: Image },
   { href: "/templates", label: "Templates", icon: LayoutGrid },
+  { href: "/library", label: "Content Library", icon: Library },
   { href: "/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/referrals", label: "Referrals", icon: Gift },
   { href: "/settings", label: "Settings", icon: Settings },
@@ -44,6 +48,13 @@ export default function DashboardSidebar() {
           <ChevronRight className="w-3 h-3" />
         )}
       </button>
+
+      {/* XP Bar at top */}
+      {sidebarOpen && (
+        <div className="px-3 pt-4 pb-2">
+          <XPBar />
+        </div>
+      )}
 
       {/* Nav items */}
       <nav className="flex-1 py-4 px-3 space-y-1 overflow-y-auto">
