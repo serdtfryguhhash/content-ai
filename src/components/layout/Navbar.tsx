@@ -20,6 +20,7 @@ import { StreakBadge } from "@/components/shared/StreakBadge";
 const NAV_LINKS = [
   { href: "/studio", label: "Studio" },
   { href: "/hooks", label: "Hooks" },
+  { href: "/hooks-demo", label: "Try Free Demo", highlight: true },
   { href: "/scripts", label: "Scripts" },
   { href: "/calendar", label: "Calendar" },
   { href: "/templates", label: "Templates" },
@@ -50,7 +51,11 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                className={
+                  "highlight" in link && link.highlight
+                    ? "px-3 py-2 rounded-lg text-sm font-medium text-secondary hover:text-secondary-600 hover:bg-secondary/10 transition-colors"
+                    : "px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                }
               >
                 {link.label}
               </Link>
@@ -165,7 +170,11 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  className={
+                    "highlight" in link && link.highlight
+                      ? "block px-3 py-2 rounded-lg text-sm font-medium text-secondary hover:text-secondary-600 hover:bg-secondary/10 transition-colors"
+                      : "block px-3 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
