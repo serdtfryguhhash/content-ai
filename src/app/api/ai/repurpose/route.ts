@@ -49,7 +49,7 @@ Each adaptation should be genuinely different and optimized for that specific pl
       const platforms = ["youtube", "tiktok", "instagram", "twitter", "linkedin", "podcast", "blog", "newsletter"];
       const fallback = platforms.map((p) => ({
         platform: p,
-        title: `${title || "Content"} — ${p.charAt(0).toUpperCase() + p.slice(1)} Edition`,
+        title: `${title || "Content"} - ${p.charAt(0).toUpperCase() + p.slice(1)} Edition`,
         content: `Adapted version of your content for ${p}. Original: ${content.slice(0, 200)}...`,
         format: `Optimized ${p} format`,
         tips: `Tailor your hook for ${p}'s audience and use platform-native features.`,

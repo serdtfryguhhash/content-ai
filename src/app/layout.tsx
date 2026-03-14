@@ -16,12 +16,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Content.ai — AI Content Production Studio for Creators",
+  title: "Content.ai - AI Content Production Studio for Creators",
   description:
     "Create 10x more content in half the time. AI-powered hooks, scripts, thumbnails, and complete content packages for every platform.",
   keywords: ["AI content creation", "content creator tools", "social media AI", "video script generator", "hook generator"],
   openGraph: {
-    title: "Content.ai — AI Content Production Studio",
+    title: "Content.ai - AI Content Production Studio",
     description: "Create 10x more content in half the time with AI.",
     type: "website",
   },

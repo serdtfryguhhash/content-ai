@@ -12,7 +12,7 @@ const FEATURES = [
   {
     icon: Sparkles,
     title: "AI Content Studio",
-    description: "Generate complete content packages — hooks, scripts, captions, hashtags, B-roll lists, and thumbnail concepts — all from a single topic.",
+    description: "Generate complete content packages - hooks, scripts, captions, hashtags, B-roll lists, and thumbnail concepts - all from a single topic.",
     color: "from-primary to-primary-600",
     href: "/studio",
   },
@@ -99,7 +99,7 @@ export default function FeaturesSection() {
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             Stop juggling 10 different tools. Content.ai gives you everything you need to ideate, 
-            create, schedule, and analyze your content — all in one place.
+            create, schedule, and analyze your content - all in one place.
           </motion.p>
         </div>
 

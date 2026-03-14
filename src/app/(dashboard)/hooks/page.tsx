@@ -21,7 +21,7 @@ const SAMPLE_HOOKS: Record<HookStyle, string[]> = {
     "The reason you're not growing has nothing to do with the algorithm.",
   ],
   curiosity: [
-    "I found a loophole that 99% of creators don't know about — and it changed everything.",
+    "I found a loophole that 99% of creators don't know about - and it changed everything.",
     "There's a hidden feature in Instagram that nobody talks about. It tripled my reach.",
     "I accidentally discovered the secret to going viral. Here's what happened...",
     "This one simple change to my content strategy made me $50K in 30 days.",

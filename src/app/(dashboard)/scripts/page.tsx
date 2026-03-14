@@ -16,21 +16,21 @@ import { Platform } from "@/types";
 
 const SAMPLE_SCRIPT = `COLD OPEN (0:00 - 0:20)
 
-What if I told you that everything you know about building an audience online is based on advice from 2020 — and the game has completely changed?
+What if I told you that everything you know about building an audience online is based on advice from 2020 - and the game has completely changed?
 
 [B-ROLL: Quick cuts of social media notifications, growing follower counts, viral content examples]
 
 INTRO (0:20 - 1:00)
 
-Hey everyone, welcome back to the channel. Today, I'm breaking down the 5 new rules of audience building in 2026 — and trust me, if you're still following the old playbook, this video is going to be a wake-up call.
+Hey everyone, welcome back to the channel. Today, I'm breaking down the 5 new rules of audience building in 2026 - and trust me, if you're still following the old playbook, this video is going to be a wake-up call.
 
-Before we dive in, quick favor — if you find this valuable, smash that like button. It genuinely helps the channel, and it takes less than a second. Alright, let's get into it.
+Before we dive in, quick favor - if you find this valuable, smash that like button. It genuinely helps the channel, and it takes less than a second. Alright, let's get into it.
 
 SECTION 1: THE DEATH OF "JUST BE CONSISTENT" (1:00 - 4:00)
 
 For years, every content guru said the same thing: "Just be consistent, post every day, and you'll grow." And look, there's truth to that. Consistency matters. But in 2026, consistency WITHOUT strategy is just organized failure.
 
-Here's what I mean. The platforms have evolved. The algorithms are smarter. And your audience's attention span is shorter than ever. Posting daily with mediocre content isn't just ineffective — it's actually hurting you.
+Here's what I mean. The platforms have evolved. The algorithms are smarter. And your audience's attention span is shorter than ever. Posting daily with mediocre content isn't just ineffective - it's actually hurting you.
 
 The new rule? STRATEGIC consistency. That means:
 - Quality over quantity, always
@@ -52,15 +52,15 @@ So instead of trying to appeal to everyone, go deep on YOUR specific topic. Beco
 
 Here's my framework for this:
 1. Pick your core expertise
-2. Create a "content moat" — content that only YOU can make
+2. Create a "content moat" - content that only YOU can make
 3. Build topical authority with clusters of related content
 4. Let the algorithm recognize you as an expert
 
 SECTION 3: THE COMMUNITY-FIRST APPROACH (7:00 - 10:00)
 
-This is the biggest shift, and most creators are completely missing it. The platforms are HEAVILY rewarding community engagement now. Comments, shares, saves, DMs — these signals matter more than ever.
+This is the biggest shift, and most creators are completely missing it. The platforms are HEAVILY rewarding community engagement now. Comments, shares, saves, DMs - these signals matter more than ever.
 
-But here's the thing — you can't just ask for engagement. You have to BUILD genuine community.
+But here's the thing - you can't just ask for engagement. You have to BUILD genuine community.
 
 What does that look like?
 - Reply to every comment for the first hour after posting
@@ -68,7 +68,7 @@ What does that look like?
 - Build off-platform community (Discord, newsletter, etc.)
 - Feature your audience in your content
 
-The creators who are growing fastest right now aren't just content creators — they're community builders.
+The creators who are growing fastest right now aren't just content creators - they're community builders.
 
 SECTION 4: AI AS YOUR CREATIVE PARTNER (10:00 - 12:30)
 
@@ -84,7 +84,7 @@ The key is using AI to amplify YOUR voice, not replace it. Your audience follows
 
 SECTION 5: THE MULTI-PLATFORM FLYWHEEL (12:30 - 14:30)
 
-The final rule — and this is crucial — is the multi-platform flywheel. In 2026, relying on a single platform is incredibly risky. Algorithm changes, policy updates, even platform shutdowns can wipe out everything overnight.
+The final rule - and this is crucial -is the multi-platform flywheel. In 2026, relying on a single platform is incredibly risky. Algorithm changes, policy updates, even platform shutdowns can wipe out everything overnight.
 
 The smart move? Create a flywheel where each platform feeds the others:
 - Long-form on YouTube → clips on TikTok and Reels
@@ -107,7 +107,7 @@ So to recap the 5 new rules:
 
 If you implement even ONE of these, you'll be ahead of 90% of creators. If you implement all five? Sky's the limit.
 
-Like this video if it was helpful. Subscribe if you want more content strategy breakdowns every Tuesday and Friday. And drop a comment telling me — which rule are you going to implement first?
+Like this video if it was helpful. Subscribe if you want more content strategy breakdowns every Tuesday and Friday. And drop a comment telling me - which rule are you going to implement first?
 
 I'll see you in the next one. Peace.
 

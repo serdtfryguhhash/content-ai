@@ -93,7 +93,7 @@ export default function CTASection() {
             </h2>
             <p className="text-lg text-primary-200 max-w-2xl mx-auto mb-10">
               Join 50,000+ creators who use Content.ai to produce better content, faster.
-              Start with our free plan — no credit card required.
+              Start with our free plan - no credit card required.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/signup">
@@ -103,7 +103,7 @@ export default function CTASection() {
                 </Button>
               </Link>
               <Link href="/pricing">
-                <Button variant="outline" size="xl" className="border-white/20 text-white hover:bg-white/10">
+                <Button variant="outline" size="xl" className="border-white/20 text-white hover:bg-white/10 bg-transparent">
                   View Pricing
                 </Button>
               </Link>

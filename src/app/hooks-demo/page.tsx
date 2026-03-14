@@ -193,7 +193,7 @@ export default function HooksDemoPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Try it — no sign up required. Generate scroll-stopping hooks for any
+            Try it - no sign up required. Generate scroll-stopping hooks for any
             platform in seconds.
           </motion.p>
         </div>

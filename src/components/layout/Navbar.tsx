@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles, ChevronDown, LogOut, Settings, User, CreditCard, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,9 +28,15 @@ const NAV_LINKS = [
   { href: "/pricing", label: "Pricing" },
 ];
 
+const MARKETING_PATHS = ["/", "/blog", "/pricing"];
+
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const { user, isAuthenticated, credits } = useApp();
+
+  // On marketing/landing pages, always show unauthenticated nav (Login / Signup)
+  const isMarketingPage = MARKETING_PATHS.includes(pathname);
 
   return (
     <nav className="sticky top-0 z-50 glass border-b">
@@ -64,8 +71,8 @@ export default function Navbar() {
 
           {/* Right section */}
           <div className="hidden md:flex items-center gap-3">
-            <StreakBadge />
-            {isAuthenticated ? (
+            {!isMarketingPage && <StreakBadge />}
+            {isAuthenticated && !isMarketingPage ? (
               <>
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
                   <Sparkles className="w-4 h-4" />
@@ -181,7 +188,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <div className="pt-2 border-t space-y-2">
-                {isAuthenticated ? (
+                {isAuthenticated && !isMarketingPage ? (
                   <>
                     <Link href="/analytics" onClick={() => setMobileMenuOpen(false)}>
                       <Button variant="outline" className="w-full">Analytics</Button>

@@ -54,7 +54,7 @@ export const DEMO_TEMPLATES: Template[] = [
     content_type: "short-form",
     template_data: {
       hook_template: "Stop scrolling if you [audience pain point]. I discovered [solution] that [result] in just [timeframe].",
-      script_template: "HOOK: Stop scrolling if you [pain point].\n\nPROBLEM: Most people think [common misconception]...\n\nSOLUTION: But here's what actually works — [your method]\n\nStep 1: [First action]\nStep 2: [Second action]\nStep 3: [Third action]\n\nRESULT: When I did this, [impressive result].\n\nCTA: Follow for more [topic] tips. Save this for later!",
+      script_template: "HOOK: Stop scrolling if you [pain point].\n\nPROBLEM: Most people think [common misconception]...\n\nSOLUTION: But here's what actually works - [your method]\n\nStep 1: [First action]\nStep 2: [Second action]\nStep 3: [Third action]\n\nRESULT: When I did this, [impressive result].\n\nCTA: Follow for more [topic] tips. Save this for later!",
       caption_template: "The [topic] hack nobody talks about 🤫\n\nI went from [before state] to [after state] using this simple method.\n\nSave this and try it today 👇",
       hashtag_suggestions: ["#contentcreator", "#growthhack", "#viral", "#socialmediatips"],
     },
@@ -73,8 +73,8 @@ export const DEMO_TEMPLATES: Template[] = [
     platform: "youtube",
     content_type: "long-form",
     template_data: {
-      hook_template: "What if I told you that [surprising fact]? In this video, I'll show you exactly [promise] — and by the end, you'll [benefit].",
-      script_template: "COLD OPEN (0:00-0:30):\n[Start with a mind-blowing fact or demonstration]\n\nINTRO (0:30-1:30):\n\"Hey everyone, welcome back to the channel. Today we're diving into [topic] — and trust me, this is going to change how you think about [subject].\"\n\nCHAPTER 1: The Problem (1:30-4:00)\n- Explain why this matters\n- Share the common struggles\n- Use a relatable example\n\nCHAPTER 2: The Framework (4:00-8:00)\n- Introduce your solution/method\n- Break it down step by step\n- Show real examples\n\nCHAPTER 3: Implementation (8:00-12:00)\n- Walk through how to actually do it\n- Screen share or demonstration\n- Address common mistakes\n\nCHAPTER 4: Results & Proof (12:00-14:00)\n- Show case studies or your own results\n- Before and after comparison\n\nOUTRO (14:00-15:00):\n\"If this helped you, smash that like button and subscribe for more [topic] content every [schedule]. Drop a comment telling me [question].\"\n\nEND SCREEN:\n\"Watch this next — [related video]\"",
+      hook_template: "What if I told you that [surprising fact]? In this video, I'll show you exactly [promise] - and by the end, you'll [benefit].",
+      script_template: "COLD OPEN (0:00-0:30):\n[Start with a mind-blowing fact or demonstration]\n\nINTRO (0:30-1:30):\n\"Hey everyone, welcome back to the channel. Today we're diving into [topic] - and trust me, this is going to change how you think about [subject].\"\n\nCHAPTER 1: The Problem (1:30-4:00)\n- Explain why this matters\n- Share the common struggles\n- Use a relatable example\n\nCHAPTER 2: The Framework (4:00-8:00)\n- Introduce your solution/method\n- Break it down step by step\n- Show real examples\n\nCHAPTER 3: Implementation (8:00-12:00)\n- Walk through how to actually do it\n- Screen share or demonstration\n- Address common mistakes\n\nCHAPTER 4: Results & Proof (12:00-14:00)\n- Show case studies or your own results\n- Before and after comparison\n\nOUTRO (14:00-15:00):\n\"If this helped you, smash that like button and subscribe for more [topic] content every [schedule]. Drop a comment telling me [question].\"\n\nEND SCREEN:\n\"Watch this next - [related video]\"",
       caption_template: "🎬 NEW VIDEO: [Title]\n\nEverything you need to know about [topic], broken down step by step.\n\nTimestamps:\n0:00 - Intro\n1:30 - The Problem\n4:00 - The Framework\n8:00 - Implementation\n12:00 - Results\n14:00 - Outro\n\n🔔 Subscribe for weekly [topic] content!",
       hashtag_suggestions: ["#youtube", "#educational", "#howto", "#tutorial", "#learnontiktok"],
     },
@@ -174,7 +174,7 @@ export const DEMO_TEMPLATES: Template[] = [
     content_type: "reel",
     template_data: {
       hook_template: "We've been working on something for [timeframe]... and it's finally here 🚀",
-      script_template: "TEASER (3-5 days before):\n\"Something BIG is coming on [date]... 👀\"\n[Show blurred/mysterious preview]\n\nCOUNTDOWN (Day before):\n\"Tomorrow changes everything.\"\n[Quick montage of behind-the-scenes]\n\nLAUNCH DAY:\n\"It's HERE. Introducing [Product Name] 🎉\"\n\nProblem: [What people struggle with]\nSolution: [Your product]\n\nKey Features:\n🎯 [Feature 1] — [Benefit]\n⚡ [Feature 2] — [Benefit]\n🔥 [Feature 3] — [Benefit]\n\nSocial Proof:\n\"[Quick testimonial from beta user]\"\n\nOffer:\n🎁 Launch Special: [Discount/Bonus]\n⏰ Only available for [timeframe]\n\nCTA:\n\"Link in bio. Don't miss this.\"\n\nFOLLOW-UP (Day after):\n\"You all CRASHED our servers 🤯\"\n[Share launch metrics/testimonials]",
+      script_template: "TEASER (3-5 days before):\n\"Something BIG is coming on [date]... 👀\"\n[Show blurred/mysterious preview]\n\nCOUNTDOWN (Day before):\n\"Tomorrow changes everything.\"\n[Quick montage of behind-the-scenes]\n\nLAUNCH DAY:\n\"It's HERE. Introducing [Product Name] 🎉\"\n\nProblem: [What people struggle with]\nSolution: [Your product]\n\nKey Features:\n🎯 [Feature 1] - [Benefit]\n⚡ [Feature 2] - [Benefit]\n🔥 [Feature 3] - [Benefit]\n\nSocial Proof:\n\"[Quick testimonial from beta user]\"\n\nOffer:\n🎁 Launch Special: [Discount/Bonus]\n⏰ Only available for [timeframe]\n\nCTA:\n\"Link in bio. Don't miss this.\"\n\nFOLLOW-UP (Day after):\n\"You all CRASHED our servers 🤯\"\n[Share launch metrics/testimonials]",
       caption_template: "It's finally here. 🚀\n\nAfter [timeframe] of development, we're thrilled to introduce [Product Name].\n\n[Product] helps you [core benefit] without [pain point].\n\n🎁 Launch offer: [Discount] for the first [number] customers\n\nLink in bio to get started 👆",
       hashtag_suggestions: ["#launch", "#newproduct", "#startup", "#entrepreneur", "#productlaunch"],
     },
@@ -214,7 +214,7 @@ export const DEMO_TEMPLATES: Template[] = [
     content_type: "article",
     template_data: {
       hook_template: "Subject: [Number/Emoji] [Curiosity hook about this week's topic]",
-      script_template: "SUBJECT LINE:\n[Emoji] [Curiosity-driven subject line]\n\nPREVIEW TEXT:\n[Teaser that complements the subject]\n\nHEADER:\n📬 [Newsletter Name] — Issue #[Number]\n\nINTRO (2-3 sentences):\n\"Happy [Day], [first_name]!\n\nThis week, [topic tease]. Plus, I'm sharing [bonus].\"\n\nSECTION 1: Main Story/Insight\n📌 [Headline]\n[3-4 paragraphs of value]\n[Include a personal angle]\n\nSECTION 2: Actionable Tips\n⚡ Quick Wins This Week:\n1. [Tip with explanation]\n2. [Tip with explanation]\n3. [Tip with explanation]\n\nSECTION 3: Tool/Resource of the Week\n🛠️ [Tool Name]\n[Why it's useful, how you use it]\n[Affiliate link if applicable]\n\nSECTION 4: Creator Spotlight\n🌟 [Feature another creator or subscriber]\n\nCTA:\n💬 Reply and tell me: [Question]\n\nFOOTER:\nThanks for reading!\n[Sign off]\n\nP.S. [Teaser for next week or special offer]",
+      script_template: "SUBJECT LINE:\n[Emoji] [Curiosity-driven subject line]\n\nPREVIEW TEXT:\n[Teaser that complements the subject]\n\nHEADER:\n📬 [Newsletter Name] - Issue #[Number]\n\nINTRO (2-3 sentences):\n\"Happy [Day], [first_name]!\n\nThis week, [topic tease]. Plus, I'm sharing [bonus].\"\n\nSECTION 1: Main Story/Insight\n📌 [Headline]\n[3-4 paragraphs of value]\n[Include a personal angle]\n\nSECTION 2: Actionable Tips\n⚡ Quick Wins This Week:\n1. [Tip with explanation]\n2. [Tip with explanation]\n3. [Tip with explanation]\n\nSECTION 3: Tool/Resource of the Week\n🛠️ [Tool Name]\n[Why it's useful, how you use it]\n[Affiliate link if applicable]\n\nSECTION 4: Creator Spotlight\n🌟 [Feature another creator or subscriber]\n\nCTA:\n💬 Reply and tell me: [Question]\n\nFOOTER:\nThanks for reading!\n[Sign off]\n\nP.S. [Teaser for next week or special offer]",
       caption_template: "New newsletter just dropped 📬\n\nThis week's issue:\n📌 [Topic 1]\n⚡ [Topic 2]\n🛠️ [Topic 3]\n\nJoin 10,000+ creators getting smarter every [day].\n\nLink in bio to subscribe (it's free) 👆",
       hashtag_suggestions: ["#newsletter", "#emailmarketing", "#contentcreator", "#creatoreconomy"],
     },
@@ -252,7 +252,7 @@ export const DEMO_BLOG_POSTS: BlogPost[] = [
     slug: "10x-your-content-output-with-ai",
     title: "How to 10x Your Content Output with AI (Without Losing Your Voice)",
     excerpt: "Discover the framework top creators use to leverage AI for content production while maintaining their unique brand voice and authenticity.",
-    content: `The creator economy is evolving faster than ever. In 2024, creators who aren't leveraging AI tools are being left behind — but those who rely on AI completely are losing what makes them special.
+    content: `The creator economy is evolving faster than ever. In 2024, creators who aren't leveraging AI tools are being left behind - but those who rely on AI completely are losing what makes them special.
 
 The sweet spot? Using AI as your creative co-pilot, not your replacement.
 
@@ -261,7 +261,7 @@ The sweet spot? Using AI as your creative co-pilot, not your replacement.
 After working with over 500 creators, I've developed what I call the "10x Framework" for AI-assisted content creation:
 
 ### 1. Ideation Amplification
-Instead of staring at a blank page, use AI to generate 50 content ideas in seconds. But here's the key — filter them through your unique perspective. Ask yourself: "Which of these would ONLY I talk about this way?"
+Instead of staring at a blank page, use AI to generate 50 content ideas in seconds. But here's the key - filter them through your unique perspective. Ask yourself: "Which of these would ONLY I talk about this way?"
 
 ### 2. Structure, Don't Script
 Let AI create outlines and structures, but write the actual content in your voice. Your audience follows you for YOUR stories, YOUR opinions, YOUR humor. AI can't replicate that.
@@ -270,7 +270,7 @@ Let AI create outlines and structures, but write the actual content in your voic
 Let AI handle the 80% (research, formatting, hashtags, SEO) while you focus on the 20% that matters most (hooks, stories, insights, personality).
 
 ### 4. Batch Production
-Use AI to create content packages — multiple pieces from one idea. A YouTube video becomes a blog post, becomes 5 tweets, becomes an Instagram carousel, becomes a newsletter. What used to take a week now takes a day.
+Use AI to create content packages - multiple pieces from one idea. A YouTube video becomes a blog post, becomes 5 tweets, becomes an Instagram carousel, becomes a newsletter. What used to take a week now takes a day.
 
 ### 5. Quality Control Loop
 Always run AI-generated content through your personal filter. Read it out loud. Does it sound like you? Would your biggest fan recognize your voice? If not, rewrite it.
@@ -287,7 +287,7 @@ Creators using this framework report:
 
 The best way to start is to pick ONE type of content and experiment with AI assistance for a week. Track your output and quality. Iterate from there.
 
-Remember: AI is a tool, not a replacement. The best content will always come from real human experiences, emotions, and perspectives — enhanced by technology, not replaced by it.
+Remember: AI is a tool, not a replacement. The best content will always come from real human experiences, emotions, and perspectives - enhanced by technology, not replaced by it.
 
 Your voice matters. AI just helps it reach more people.`,
     cover_image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop",
@@ -306,7 +306,7 @@ Your voice matters. AI just helps it reach more people.`,
     excerpt: "Stop posting randomly. Learn the data-driven content calendar strategy that top creators use to grow consistently across all platforms.",
     content: `If you're posting content without a calendar, you're leaving growth on the table.
 
-A content calendar isn't just about organization — it's about strategy. Here's how the top 1% of creators plan their content for maximum impact.
+A content calendar isn't just about organization - it's about strategy. Here's how the top 1% of creators plan their content for maximum impact.
 
 ## Why Most Content Calendars Fail
 
@@ -376,7 +376,7 @@ After analyzing over 10,000 viral pieces of content across YouTube, TikTok, Inst
 
 ## Formula #1: The Controversial Take
 
-"Everyone says [common advice] — they're wrong."
+"Everyone says [common advice] - they're wrong."
 
 This works because it triggers a psychological response. People either agree passionately or want to prove you wrong. Either way, they're engaged.
 
@@ -433,7 +433,7 @@ Examples:
 
 The key is to mix and match. Don't use the same formula every time. Rotate through all five to keep your content fresh and unpredictable.
 
-Start every piece of content by writing 5 hooks — one in each style. Then pick the strongest one. This alone will transform your content performance.`,
+Start every piece of content by writing 5 hooks - one in each style. Then pick the strongest one. This alone will transform your content performance.`,
     cover_image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=600&fit=crop",
     author: "Emma Rodriguez",
     author_avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",

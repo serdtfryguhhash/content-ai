@@ -1,5 +1,5 @@
 /**
- * Content.ai — AI Client powered by Anthropic Claude SDK
+ * Content.ai - AI Client powered by Anthropic Claude SDK
  *
  * Uses Claude claude-sonnet-4-20250514 via the Anthropic API
  */
@@ -43,7 +43,7 @@ export async function chat(
     return "No response generated.";
   } catch (error) {
     if (error instanceof Anthropic.APIError) {
-      throw new Error(`Anthropic API error: ${error.status} — ${error.message}`);
+      throw new Error(`Anthropic API error: ${error.status} - ${error.message}`);
     }
     throw error;
   }
@@ -59,7 +59,7 @@ export async function generateContentPackage(params: {
   return chat([
     {
       role: "system",
-      content: `You are Content.ai's content production engine — a world-class content
+      content: `You are Content.ai's content production engine - a world-class content
       strategist who creates viral content packages. Generate a COMPLETE content package
       in JSON format with these fields:
       {
